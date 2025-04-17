@@ -1,46 +1,85 @@
-# Getting Started with Create React App
+# Dorspec - Дорспецмонтаж
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Dorspec Logo](public/logo.png)
 
-## Available Scripts
+## Описание проекта
 
-In the project directory, you can run:
+Проект представляет собой лендинг-страницу для компании "Дорспецмонтаж", специализирующейся на дорожных работах и строительстве. Сайт разработан с использованием современных технологий для обеспечения стильного дизайна и удобного пользовательского опыта.
 
-### `npm start`
+## Технологии
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React + TypeScript
+- Tailwind CSS
+- Framer Motion (для анимаций)
+- React Router (для навигации)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Функциональности
 
-### `npm test`
+- Адаптивный дизайн для всех устройств
+- Анимированные переходы и интерактивные элементы
+- Форма обратной связи с валидацией
+- Галерея проектов
+- Информация о услугах компании
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Установка и запуск проекта
 
-### `npm run build`
+### Требования
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (версия 14+)
+- npm или yarn
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Установка зависимостей
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+# или
+yarn install
+```
 
-### `npm run eject`
+### Запуск в режиме разработки
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+npm start
+# или
+yarn start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Приложение будет доступно по адресу [http://localhost:3000](http://localhost:3000)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Сборка проекта
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+npm run build
+# или
+yarn build
+```
 
-## Learn More
+Собранный проект будет находиться в директории `build/`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Структура проекта
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+├── public/               # Статические файлы
+├── src/                  # Исходный код
+│   ├── assets/           # Изображения и ресурсы
+│   ├── components/       # Компоненты React
+│   ├── pages/            # Страницы приложения
+│   ├── hooks/            # Кастомные React хуки
+│   ├── utils/            # Вспомогательные функции
+│   ├── types/            # TypeScript типы
+│   ├── App.tsx           # Главный компонент
+│   └── index.tsx         # Точка входа
+├── .env                  # Переменные окружения (не включены в репозиторий)
+├── .env.example          # Пример переменных окружения
+└── package.json          # Зависимости и скрипты
+```
+
+## Контакты
+
+По всем вопросам обращайтесь:
+- Email: [контактный email]
+- Телефон: [контактный телефон]
+
+## Лицензия
+
+[Укажите тип лицензии, например MIT]

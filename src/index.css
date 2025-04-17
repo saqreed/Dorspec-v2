@@ -1,13 +1,237 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-gray-900 text-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+
+  h1 {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h2 {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  h3 {
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl;
+  }
+
+  p {
+    @apply text-gray-300;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-12 sm:py-16 lg:py-20;
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded-lg transition-all duration-300 font-medium;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary/90;
+  }
+
+  .btn-outline {
+    @apply border-2 border-white hover:bg-white hover:text-primary;
+  }
+
+  .card {
+    @apply bg-white/5 backdrop-blur-sm rounded-lg p-4;
+  }
+
+  .input {
+    @apply w-full px-4 py-2 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-primary;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-gray-300 mb-1;
+  }
+
+  /* Navigation */
+  .nav-link {
+    @apply text-white/80 hover:text-white transition-colors;
+  }
+
+  .nav-link-mobile {
+    @apply block px-4 py-2 text-sm font-medium transition-colors;
+  }
+
+  /* Grid layouts */
+  .grid-layout {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4;
+  }
+
+  .grid-auto-fit {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4;
+  }
+
+  .grid-auto-fit-sm {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4;
+  }
+
+  /* Spacing utilities */
+  .space-y-responsive {
+    @apply space-y-4;
+  }
+
+  .space-x-responsive {
+    @apply space-x-4;
+  }
+
+  /* Text utilities */
+  .text-responsive {
+    @apply text-sm sm:text-base;
+  }
+
+  .heading {
+    @apply text-2xl sm:text-3xl lg:text-4xl font-bold mb-6;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-dark;
+  }
+
+  /* Flex utilities */
+  .flex-responsive {
+    @apply flex flex-col sm:flex-row;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  /* Margin utilities */
+  .my-responsive {
+    @apply my-4 sm:my-6;
+  }
+
+  .mx-responsive {
+    @apply mx-4 sm:mx-6;
+  }
+
+  /* Padding utilities */
+  .py-responsive {
+    @apply py-4 sm:py-6;
+  }
+
+  .px-responsive {
+    @apply px-4 sm:px-6;
+  }
+
+  /* Section specific */
+  .section-content {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .section-title {
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6;
+  }
+
+  .section-description {
+    @apply text-base md:text-lg text-gray-600 mb-6 md:mb-8;
+  }
 }
+
+/* Mobile-specific styles */
+@media (max-width: 640px) {
+  .container {
+    @apply px-4;
+  }
+
+  .section {
+    @apply py-8;
+  }
+
+  .btn {
+    @apply px-4 py-2.5;
+  }
+}
+
+/* Tablet-specific styles */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .container {
+    @apply px-6;
+  }
+
+  .section {
+    @apply py-12;
+  }
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent text size adjustment on orientation change */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 640px) {
+  button, a, input, select, textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Optimize images for mobile */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Improve form elements on mobile */
+@media (max-width: 640px) {
+  input, select, textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full hover:bg-gray-400;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
